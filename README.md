@@ -33,6 +33,20 @@ The project includes comprehensive test suites covering various aspects of the N
 - Integration tests for full contract functionality
 - Deployment script tests
 
+## Running Tests
+
+To run all tests, including integration tests that are skipped in CI:
+
+```bash
+CI=false forge test
+```
+
+To run tests as they would run in the CI environment (skipping certain integration tests):
+
+```bash
+CI=true forge test
+```
+
 ## Deployment
 
 The deployment script (`DeployMoodNFT.s.sol`) allows for easy deployment of the MoodNFT contract with specified SVG URIs for happy and sad moods.

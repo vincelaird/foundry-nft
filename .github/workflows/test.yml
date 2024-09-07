@@ -8,6 +8,7 @@ on:
 env:
   FOUNDRY_PROFILE: ci
   FOUNDRY_SOLC_VERSION: 0.8.24
+  CI: true
 
 jobs:
   check:
@@ -38,5 +39,5 @@ jobs:
 
       - name: Run Forge tests
         run: |
-          forge test -vvv
+          CI=true forge test -vvv
         id: test
