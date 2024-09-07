@@ -29,7 +29,6 @@ jobs:
       - name: Print environment info
         run: |
           forge --version
-          solc --version
           echo $FOUNDRY_SOLC_VERSION          
 
       - name: Run Forge build
